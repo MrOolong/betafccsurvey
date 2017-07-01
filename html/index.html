@@ -11,27 +11,30 @@
     
 <div id="container" class="container well">
 	<div>
-		<form class="form-signin text-left" name="space_planning_request">
-			<div>
-				<label for=""><h1>Space Planning Request</h1></label>
+		<form class="form-signin text-left" name="space_planning_request" action="#" method="post">
+			<div class="">
+				<label for=""><h1>Space Planning Request Form</h1></label>
 			</div>
 			<div>
+				<p>For the submission of planogram requests for the Space Planning Department</p>
+			</div>
+			<div class="formdiv">
 				<label for="req_name">Name:</label><br>
-				<input type="text" name="req_name" value="Enter name" maxlength="100" required/>
+				<input type="text" name="req_name" placeholder="Enter name" maxlength="100" required/>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="your_email">Email:</label><br>
-				<input type="text" name="your_email" value="Enter email address" maxlength="100" required/>
+				<input type="email" name="your_email" placeholder="Enter valid email address" maxlength="100" required/>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="sub_date">Today's Request Date:</label><br>
-				<input type="text" name="sub_date" value="MM/DD/YY" maxlength="100" required/>
+				<input type="date" name="sub_date" placeholder="MM/DD/YY" maxlength="100" required/>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="due_date">Need By Date:</label><br>
-				<input type="text" name="due_date" value="MM/DD/YY" maxlength="100" required/>
+				<input type="date" name="due_date" placeholder="MM/DD/YY" maxlength="100" required/>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="region">Customer Region:</label><br>
 				<select name="region" required>
 					<option value="default_region" selected disabled>Please select Region</option>
@@ -41,7 +44,7 @@
     				<option value="midwest">Midwest</option>
     			</select>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="sales_channel">Customer Sales Channel:</label><br>
 				<select name="sales_channel" required>
 					<option value="default_channel" selected disabled>Please select Channel</option>
@@ -50,7 +53,7 @@
     				<option value="independent">Independent</option>
     			</select>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="DC">Customer Primary DC:</label><br>
 				<select name="DC" required>
     				<option value="default_DC" selected disabled>Please select DC</option>
@@ -64,40 +67,43 @@
     				<option value="york">York</option>
     			</select>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="chain_code">Customer Chain Code:</label><br>
-				<input type="text" name="chain_code" value="e.g. 54321" maxlength="100" required/>
+				<input type="text" name="chain_code" placeholder="e.g. 54321" maxlength="100" required/>
 			</div>
-			<div>
-				<label for="store_name">Store Name</label><br>
-				<input type="text" name="store_name" value="e.g. Harvest Market 572" maxlength="100" required/>
+			<div class="formdiv">
+				<label for="store_name">Store Name:</label><br>
+				<input type="text" name="store_name" placeholder="e.g. Harvest Market 572" maxlength="100" required/>
 			</div>
-			<div>
-				<label for="department">Store Department</label><br>
+			<div class="formdiv">
+				<label for="department">Store Department:</label><br>
 				<input type="checkbox" name="department" value="frozen"/> Frozen
 				<input type="checkbox" name="department" value="chill"/> Chill
 				<input type="checkbox" name="department" value="drygrocery"/> Dry Grocery
 				<input type="checkbox" name="department" value="nonfood"/> Non-Food
 				<input type="checkbox" name="department" value="hbc"/> Health & Beauty
 			</div>
-			<div>
-				<label for="store_cat">Store Category</label><br>
-				<input type="text" name="store_cat" value="Please Enter Category" maxlength="100" required/>
+			<div class="formdiv">
+				<label for="store_cat">Store Category:</label><br>
+				<input type="text" name="store_cat" placeholder="Please Enter Category" maxlength="100" required/>
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="gondola_type">Gondola Type:</label><br>
-				<input type="radio" name="gondola_type" value="Lozier"/> Lozier
-				<input type="radio" name="gondola_type" value="Metro"/> Metro
-				<input type="radio" name="gondola_type" value="Metro"/> Other
+				<input type="radio" name="gondola_type" value="Lozier" required/> Lozier
+				<input type="radio" name="gondola_type" value="Metro" required/> Metro
+				<input type="radio" name="gondola_type" value="Metro" required/> Other
 			</div>
-			<div>
+			<div class="formdiv">
 				<label for="">Shelf Dimensions in Inches:</label><br>
-				Height <input type="number" name="dim" value="Height" maxlength="50" required/><br>
-				Width <input type="number" name="dim" value="Width" maxlength="50" required/><br>
-				Depth <input type="number" name="dim" value="Depth" maxlength="50" required/>
+				Height - <input class="" type="number" name="dim" value="Height" min="1" max="1000" placeholder="e.g 72" required/><br>
+				Width - <input type="number" name="dim" value="Width" min="1" max="1000" placeholder="e.g 48" required/><br>
+				Depth - <input type="number" name="dim" value="Depth" min="1" max="1000" placeholder="e.g 22" required/><br>
 			</div>
-			<div>
-				<input type="submit" name="submit"/>
+			<div class="formdiv">
+				<textarea name="textarea" placeholder="Comments or additional information" rows="5" cols="50"></textarea>
+			</div>
+			<div class="formdiv">
+				<input type="submit" name="submit" class="btn"/>
 			</div>
 		</form>
 	</div>
