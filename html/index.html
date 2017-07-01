@@ -8,12 +8,14 @@
     <script src="../js/bootstrap.min.js"></script>
 </head>
 <body>
-    <h1>Space Planning Request</h1><!--Space Planning Request-->
+    <header>
+    	<h1>Space Planning Request</h1>
+    </header>
 
 <div id="topcontainer">
 	<div>
-		1<form class="form-signin" name="ReqName">
-			Requestor's Name:
+		<form class="form-signin" name="ReqName">
+			<label for="">Requestor's Name:</label>
 			<input  type="text" name="Requester_Name" value="Please type your name" maxlength="100" />
 		</form>
 	</div>
@@ -45,6 +47,12 @@
 	6<form name="ReqName">
 			Customer's Primary DC:
 			<input type="text" name="Requester_Name" value="Select DC" maxlength="100" />
+			<select name="cars">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+</select>
 		</form>
 	</div>
 	<div>
@@ -62,7 +70,7 @@
 	<div>
 	9<form name="ReqName">
 			Gondola Type:
-			<input type="text" name="Requester_Name" value="Please type your name" maxlength="100" />
+			<input type="text" name="Requester_Name" value="" maxlength="100" />
 		</form>
 	</div>
 	<div>
