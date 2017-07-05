@@ -1,114 +1,141 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BetaFCC Survey Form Project</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/bootstrap.min.js"></script>
+	<meta charset="UTF-8">
+	<title>BetaFCC Survey Form Project</title>
+	<link href="css/bootstrap.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="js/bootstrap.min.js">
+	</script>
 </head>
 <body>
-    
-<div id="container" class="container well">
-	<div>
-		<form class="form-signin text-left" name="space_planning_request" action="#" method="post">
-			<div class="">
-				<label for=""><h1>Space Planning Request Form</h1></label>
-			</div>
-			<div>
-				<p>For the submission of planogram requests for the Space Planning Department</p>
-			</div>
-			<div class="formdiv">
-				<label for="req_name">Name:</label><br>
-				<input type="text" name="req_name" placeholder="Enter name" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="your_email">Email:</label><br>
-				<input type="email" name="your_email" placeholder="Enter valid email address" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="sub_date">Today's Request Date:</label><br>
-				<input type="date" name="sub_date" placeholder="MM/DD/YY" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="due_date">Need By Date:</label><br>
-				<input type="date" name="due_date" placeholder="MM/DD/YY" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="region">Customer Region:</label><br>
-				<select name="region" required>
-					<option value="default_region" selected disabled>Please select Region</option>
-    				<option value="northeast">Northeast</option>
-    				<option value="mid-atlantic">Mid-Atlantic</option>
-    				<option value="southeast">Southeast</option>
-    				<option value="midwest">Midwest</option>
-    			</select>
-			</div>
-			<div class="formdiv">
-				<label for="sales_channel">Customer Sales Channel:</label><br>
-				<select name="sales_channel" required>
-					<option value="default_channel" selected disabled>Please select Channel</option>
-    				<option value="natural">Natural</option>
-    				<option value="supermarket">Supermarket</option>
-    				<option value="independent">Independent</option>
-    			</select>
-			</div>
-			<div class="formdiv">
-				<label for="DC">Customer Primary DC:</label><br>
-				<select name="DC" required>
-    				<option value="default_DC" selected disabled>Please select DC</option>
-    				<option value="dayville">Dayville</option>
-    				<option value="greenwood">Greenwood</option>
-    				<option value="hudsonvalley">Hudson Valley</option>
-    				<option value="iowacity">Iowa City</option>
-    				<option value="morenovalley">Moreno Valley</option>
-    				<option value="sarasota">Sarasota</option>
-    				<option value="twincities">Twin Cities</option>
-    				<option value="york">York</option>
-    			</select>
-			</div>
-			<div class="formdiv">
-				<label for="chain_code">Customer Chain Code:</label><br>
-				<input type="text" name="chain_code" placeholder="e.g. 54321" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="store_name">Store Name:</label><br>
-				<input type="text" name="store_name" placeholder="e.g. Harvest Market 572" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="department">Store Department:</label><br>
-				<input type="checkbox" name="department" value="frozen"/> Frozen
-				<input type="checkbox" name="department" value="chill"/> Chill
-				<input type="checkbox" name="department" value="drygrocery"/> Dry Grocery
-				<input type="checkbox" name="department" value="nonfood"/> Non-Food
-				<input type="checkbox" name="department" value="hbc"/> Health & Beauty
-			</div>
-			<div class="formdiv">
-				<label for="store_cat">Store Category:</label><br>
-				<input type="text" name="store_cat" placeholder="Please Enter Category" maxlength="100" required/>
-			</div>
-			<div class="formdiv">
-				<label for="gondola_type">Gondola Type:</label><br>
-				<input type="radio" name="gondola_type" value="Lozier" required/> Lozier
-				<input type="radio" name="gondola_type" value="Metro" required/> Metro
-				<input type="radio" name="gondola_type" value="Metro" required/> Other
-			</div>
-			<div id="" class="formdiv">
-				<label id="" for="">Shelf Dimensions (in Inches):</label><br>
-				<label id="" for="inputfix1">Height:<input id="inputfix1" class="" type="number" name="dim" value="Height" min="1" max="1000" placeholder="e.g 72" required/></label>
-				<label id="" for="inputfix2">Width:<input id="inputfix2" type="number" name="dim" value="Width" min="1" max="1000" placeholder="e.g 48" required/></label>
-				<label id="" for="inputfix3">Depth:<input id="inputfix3" type="number" name="dim" value="Depth" min="1" max="1000" placeholder="e.g 22" required/></label>
-			</div>
-			<div class="formdiv">
-				<textarea name="textarea" placeholder="Comments or additional information" rows="5" cols="50"></textarea>
-			</div>
-			<div class="formdiv">
-				<input type="submit" name="submit" class="btn"/>
-			</div>
-		</form>
+	<div class="container well" id="container">
+		<div>
+			<form action="#" class="form-signin text-left" id="space_planning_request" method="post" name="space_planning_request">
+				<div class="">
+					<label for=""></label>
+					<h1><label for="">Space Planning Request Form</label></h1>
+				</div>
+				<div>
+					<p>For the submission of planogram requests for the Space Planning Department</p>
+				</div>
+				<div class="formdiv">
+					<label for="req_name">Name:</label><br>
+					<input maxlength="100" name="req_name" placeholder="Enter name" type="text">
+				</div>
+				<div class="formdiv">
+					<label for="your_email">Email:</label><br>
+					<input maxlength="100" name="your_email" placeholder="Enter valid email address" type="email">
+				</div>
+				<div class="formdiv">
+					<label for="sub_date">Today's Request Date:</label><br>
+					<input maxlength="100" name="sub_date" placeholder="MM/DD/YY" type="date">
+				</div>
+				<div class="formdiv">
+					<label for="due_date">Need By Date:</label><br>
+					<input maxlength="100" name="due_date" placeholder="MM/DD/YY" type="date">
+				</div>
+				<div class="formdiv">
+					<label for="region">Customer Region:</label><br>
+					<select name="region" required="">
+						<option disabled selected value="default_region">
+							Please select Region
+						</option>
+						<option value="northeast">
+							Northeast
+						</option>
+						<option value="mid-atlantic">
+							Mid-Atlantic
+						</option>
+						<option value="southeast">
+							Southeast
+						</option>
+						<option value="midwest">
+							Midwest
+						</option>
+					</select>
+				</div>
+				<div class="formdiv">
+					<label for="sales_channel">Customer Sales Channel:</label><br>
+					<select name="sales_channel" required="">
+						<option disabled selected value="default_channel">
+							Please select Channel
+						</option>
+						<option value="natural">
+							Natural
+						</option>
+						<option value="supermarket">
+							Supermarket
+						</option>
+						<option value="independent">
+							Independent
+						</option>
+					</select>
+				</div>
+				<div class="formdiv">
+					<label for="DC">Customer Primary DC:</label><br>
+					<select name="DC" required="">
+						<option disabled selected value="default_DC">
+							Please select DC
+						</option>
+						<option value="dayville">
+							Dayville
+						</option>
+						<option value="greenwood">
+							Greenwood
+						</option>
+						<option value="hudsonvalley">
+							Hudson Valley
+						</option>
+						<option value="iowacity">
+							Iowa City
+						</option>
+						<option value="morenovalley">
+							Moreno Valley
+						</option>
+						<option value="sarasota">
+							Sarasota
+						</option>
+						<option value="twincities">
+							Twin Cities
+						</option>
+						<option value="york">
+							York
+						</option>
+					</select>
+				</div>
+				<div class="formdiv">
+					<label for="chain_code">Customer Chain Code:</label><br>
+					<input maxlength="100" name="chain_code" placeholder="e.g. 54321" type="text">
+				</div>
+				<div class="formdiv">
+					<label for="store_name">Store Name:</label><br>
+					<input maxlength="100" name="store_name" placeholder="e.g. Harvest Market 572" type="text">
+				</div>
+				<div class="formdiv">
+					<label for="department">Store Department:</label><br>
+					<input name="department" type="checkbox" value="frozen"> Frozen <input name="department" type="checkbox" value="chill"> Chill <input name="department" type="checkbox" value="drygrocery"> Dry Grocery <input name="department" type="checkbox" value="nonfood"> Non-Food <input name="department" type="checkbox" value="hbc"> Health & Beauty
+				</div>
+				<div class="formdiv">
+					<label for="store_cat">Store Category:</label><br>
+					<input maxlength="100" name="store_cat" placeholder="Please Enter Category" type="text">
+				</div>
+				<div class="formdiv">
+					<label for="gondola_type">Gondola Type:</label><br>
+					<input name="gondola_type" type="radio" value="Lozier"> Lozier <input name="gondola_type" type="radio" value="Metro"> Metro <input name="gondola_type" type="radio" value="Metro"> Other
+				</div>
+				<div class="formdiv" id="">
+					<label for="" id="">Shelf Dimensions (in Inches):</label><br>
+					<label for="inputfix1" id="">Height:<input class="" id="inputfix1" max="1000" min="1" name="dim" placeholder="e.g 72" type="number" value="Height"></label> <label for="inputfix2" id="">Width:<input id="inputfix2" max="1000" min="1" name="dim" placeholder="e.g 48" type="number" value="Width"></label> <label for="inputfix3" id="">Depth:<input id="inputfix3" max="1000" min="1" name="dim" placeholder="e.g 22" type="number" value="Depth"></label>
+				</div>
+				<div class="formdiv">
+					<textarea cols="50" name="textarea" placeholder="Comments or additional information" rows="5"></textarea>
+				</div>
+				<div class="formdiv">
+					<input class="btn" name="submit" type="submit">
+				</div>
+			</form>
+		</div>
 	</div>
-
-</div>
-
 </body>
 </html>
