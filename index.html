@@ -13,32 +13,32 @@
 		<div>
 			<form action="#" class="form-signin text-left" id="space_planning_request" method="post" name="space_planning_request">
 				<div class="">
-					<label for=""></label>
-					<h1><label for="">Space Planning Request Form</label></h1>
+					<h1>Space Planning Request Form</h1>
 				</div>
 				<div>
 					<p>For the submission of planogram requests for the Space Planning Department</p>
+					<p>*All fields marked with an asterik are required</p>
 				</div>
 				<div class="formdiv">
-					<label for="req_name">Name:</label><br>
-					<input maxlength="100" name="req_name" placeholder="Enter name" type="text">
+					<label for="req_name">*Name:</label><br>
+					<input id="req_name" maxlength="100" name="req_name" placeholder="Enter name" type="text">
 				</div>
 				<div class="formdiv">
-					<label for="your_email">Email:</label><br>
-					<input maxlength="100" name="your_email" placeholder="Enter valid email address" type="email">
+					<label for="email">*Email:</label><br>
+					<input id="email" maxlength="100" name="email" placeholder="Enter valid email address" type="email">
 				</div>
 				<div class="formdiv">
-					<label for="sub_date">Today's Request Date:</label><br>
-					<input maxlength="100" name="sub_date" placeholder="MM/DD/YY" type="date">
+					<label for="sub_date">*Today's Request Date:</label><br>
+					<input id="sub_date" name="sub_date" type="date">
 				</div>
 				<div class="formdiv">
-					<label for="due_date">Need By Date:</label><br>
-					<input maxlength="100" name="due_date" placeholder="MM/DD/YY" type="date">
+					<label for="due_date">*Need By Date:</label><br>
+					<input id="due_date" name="due_date" type="date">
 				</div>
 				<div class="formdiv">
-					<label for="region">Customer Region:</label><br>
-					<select name="region" required="">
-						<option disabled selected value="default_region">
+					<label for="region">*Customer Region:</label><br>
+					<select id="region" name="region" required size="4">
+						<option disabled selected>
 							Please select Region
 						</option>
 						<option value="northeast">
@@ -56,9 +56,9 @@
 					</select>
 				</div>
 				<div class="formdiv">
-					<label for="sales_channel">Customer Sales Channel:</label><br>
-					<select name="sales_channel" required="">
-						<option disabled selected value="default_channel">
+					<label for="sales_channel">*Customer Sales Channel:</label><br>
+					<select id="sales_channel" size="3" name="sales_channel" required>
+						<option disabled selected>
 							Please select Channel
 						</option>
 						<option value="natural">
@@ -73,9 +73,9 @@
 					</select>
 				</div>
 				<div class="formdiv">
-					<label for="DC">Customer Primary DC:</label><br>
-					<select name="DC" required="">
-						<option disabled selected value="default_DC">
+					<label for="DC">*Customer Primary DC:</label><br>
+					<select id="DC" name="DC" required size="8">
+						<option disabled selected>
 							Please select DC
 						</option>
 						<option value="dayville">
@@ -105,28 +105,30 @@
 					</select>
 				</div>
 				<div class="formdiv">
-					<label for="chain_code">Customer Chain Code:</label><br>
-					<input maxlength="100" name="chain_code" placeholder="e.g. 54321" type="text">
+					<label for="chain_code">*Customer Chain Code:</label><br>
+					<input id="chain_code" maxlength="100" name="chain_code" placeholder="e.g. 54321" type="text">
 				</div>
 				<div class="formdiv">
-					<label for="store_name">Store Name:</label><br>
-					<input maxlength="100" name="store_name" placeholder="e.g. Harvest Market 572" type="text">
+					<label for="store_name">*Store Name:</label><br>
+					<input id="store_name" maxlength="100" name="store_name" placeholder="e.g. Harvest Market 572" type="text">
 				</div>
 				<div class="formdiv">
-					<label for="department">Store Department:</label><br>
-					<input name="department" type="checkbox" value="frozen"> Frozen <input name="department" type="checkbox" value="chill"> Chill <input name="department" type="checkbox" value="drygrocery"> Dry Grocery <input name="department" type="checkbox" value="nonfood"> Non-Food <input name="department" type="checkbox" value="hbc"> Health & Beauty
+					<label for="department">*Store Department(Select one):</label><br>
+					<input id="department" name="department" type="checkbox" value="frozen"> Frozen <input name="department" type="checkbox" value="chill"> Chill <input name="department" type="checkbox" value="drygrocery"> Dry Grocery <input name="department" type="checkbox" value="nonfood"> Non-Food <input name="department" type="checkbox" value="hbc"> Health & Beauty
 				</div>
 				<div class="formdiv">
-					<label for="store_cat">Store Category:</label><br>
-					<input maxlength="100" name="store_cat" placeholder="Please Enter Category" type="text">
+					<label for="store_cat">*Store Category:</label><br>
+					<input id="store_cat" maxlength="100" name="store_cat" placeholder="Please Enter Category" type="text">
 				</div>
 				<div class="formdiv">
-					<label for="gondola_type">Gondola Type:</label><br>
-					<input name="gondola_type" type="radio" value="Lozier"> Lozier <input name="gondola_type" type="radio" value="Metro"> Metro <input name="gondola_type" type="radio" value="Metro"> Other
+					<label for="gondola_type">*Gondola Type:</label><br>
+					<input id="gondola_type" name="gondola_type" type="radio" value="Lozier"> Lozier <input name="gondola_type" type="radio" value="Metro"> Metro <input name="gondola_type" type="radio" value="Metro"> Other
 				</div>
-				<div class="formdiv" id="">
-					<label for="" id="">Shelf Dimensions (in Inches):</label><br>
-					<label for="inputfix1" id="">Height:<input class="" id="inputfix1" max="1000" min="1" name="dim" placeholder="e.g 72" type="number" value="Height"></label> <label for="inputfix2" id="">Width:<input id="inputfix2" max="1000" min="1" name="dim" placeholder="e.g 48" type="number" value="Width"></label> <label for="inputfix3" id="">Depth:<input id="inputfix3" max="1000" min="1" name="dim" placeholder="e.g 22" type="number" value="Depth"></label>
+				<div class="formdiv">
+					<label>*Shelf Dimensions (in Inches):</label><br>
+					<label for="inputfix1">Height:<input id="inputfix1" max="1000" min="1" name="height" placeholder="e.g 72" type="number" required></label>
+					<label for="inputfix2">Width:<input id="inputfix2" max="1000" min="1" name="width" placeholder="e.g 48" type="number" required></label>
+					<label for="inputfix3">Depth:<input id="inputfix3" max="1000" min="1" name="depth" placeholder="e.g 22" type="number" required></label>
 				</div>
 				<div class="formdiv">
 					<textarea cols="50" name="textarea" placeholder="Comments or additional information" rows="5"></textarea>
